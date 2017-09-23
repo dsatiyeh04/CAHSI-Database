@@ -4,7 +4,7 @@
    //Specify the Database username
    define('DB_USERNAME', 'cs_scarrillo7');
    //Specify the Database password
-   define('DB_PASSWORD', 'Sweglerd!4');
+   define('DB_PASSWORD', 'nanochromatico9');
    //Choose the Database (name)
    define('DB_DATABASE', 'f17cs4342team07');
    //We make the connection.
