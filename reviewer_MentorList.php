@@ -1,6 +1,3 @@
-<?php
-   include('session.php');
-?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -30,17 +27,24 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
   <body>
-    <div class="page home-page">
+    <div class="page charts-page">
       <!-- Main Navbar-->
       <header class="header">
         <nav class="navbar">
+          <!-- Search Box-->
+          <div class="search-box">
+            <button class="dismiss"><i class="icon-close"></i></button>
+            <form id="searchForm" action="#" role="search">
+              <input type="search" placeholder="What are you looking for..." class="form-control">
+            </form>
+          </div>
           <div class="container-fluid">
             <div class="navbar-holder d-flex align-items-center justify-content-between">
               <!-- Navbar Header-->
               <div class="navbar-header">
-                <!-- Navbar Brand --><a href="indexu.php" class="navbar-brand">
-                  <div class="brand-text brand-big hidden-lg-down"><span>USER </span><strong>Dashboard</strong></div>
-                  <div class="brand-text brand-small"><strong>UD</strong></div></a>
+                <!-- Navbar Brand --><a href="index.php" class="navbar-brand">
+                  <div class="brand-text brand-big hidden-lg-down"><span>=ADMIN </span><strong>Dashboard</strong></div>
+                  <div class="brand-text brand-small"><strong>AD</strong></div></a>
                 <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
               </div>
               <!-- Navbar Menu -->
@@ -48,40 +52,61 @@
                 <!-- Search-->
                 <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i></a></li>
                 <!-- Notifications-->
-
+<!--
+                <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell-o"></i><span class="badge bg-red">12</span></a>
+                </li>
+-->
                 <!-- Logout    -->
-                <li class="nav-item"><a href="logout.php" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
+                <li class="nav-item"><a href="login.php" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
               </ul>
             </div>
           </div>
         </nav>
       </header>
-      <div class="page-content d-flex align-items-stretch">
+      <div class="page-content d-flex align-items-stretch"> 
         <!-- Side Navbar -->
         <nav class="side-navbar">
           <!-- Sidebar Header-->
           <div class="sidebar-header d-flex align-items-center">
-            <div class="avatar"><img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
+            <div class="avatar"><img src="img/Claudia.jpg" alt="..." class="img-fluid rounded-circle"></div>
             <div class="title">
-              <h1 class="h4">User</h1>
-              <p>Student</p>
+              <h1 class="h4">Claudia Casas</h1>
+              <p>Database Administrator</p>
             </div>
           </div>
-          <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
-          <ul class="list-unstyled">
-<!--            <li class="active"> <a href="./"><i class="icon-home"></i>Home</a></li>-->
-            <li> <a href="abstracts.php"> <i class="icon-padnote"></i>Abstracts </a></li>
-            <li> <a href="guidelines.php"> <i class="icon-list"></i>Deadlines </a></li>
-            <li> <a href="login.php"> <i class="icon-interface-windows"></i>Login Page</a></li>
-            </ul><span class="heading">Abstracts</span>
         </nav>
         <div class="content-inner">
           <!-- Page Header-->
           <header class="page-header">
             <div class="container-fluid">
-              <h2 class="no-margin-bottom">Dashboard</h2>
+              <h2 class="no-margin-bottom">Reviewer, Mentor, Student List</h2>
             </div>
           </header>
+      <!--Page Menu-->
+
+        <form method ="post" action ="">
+            <fieldset>
+                <legend>Add Users:</legend>
+                Username:<br>
+                    <input type="text" name="username"/><br>
+                First, Last Name:<br>
+                    <input type="text" name="Uname"/><br>
+                Email Address:<br>
+                    <input type="text" name="Uemail"/><br>
+                Password:<br>
+                    <input type="text" name="Upassword"/><br>
+                Gender:<br>
+                    <input type="text" name="Ugender"/><br>
+                Professional Titles:<br>
+                    <input type="text" name="Up_tittles"/><br>
+               Institution:<br>
+                    <input type="text" name="school"/><br>
+                Mentor or Student:<br>
+                    <input type="text" name="role"/><br>
+                <input type ="submit" value ="Submit">
+            </fieldset>
+        </form>
+            
           <!-- Page Footer-->
           <footer class="main-footer">
             <div class="container-fluid">
@@ -105,8 +130,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.cookie.js"> </script>
     <script src="js/jquery.validate.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-    <script src="js/charts-home.js"></script>
     <script src="js/front.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
     <!---->

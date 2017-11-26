@@ -1,12 +1,9 @@
-<?php
-   include('session.php');
-?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Abstract Database</title>
+    <title>Absract Database </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -30,10 +27,17 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
   <body>
-    <div class="page home-page">
+    <div class="page form-page">
       <!-- Main Navbar-->
       <header class="header">
         <nav class="navbar">
+          <!-- Search Box-->
+          <div class="search-box">
+            <button class="dismiss"><i class="icon-close"></i></button>
+            <form id="searchForm" action="#" role="search">
+              <input type="search" placeholder="What are you looking for..." class="form-control">
+            </form>
+          </div>
           <div class="container-fluid">
             <div class="navbar-holder d-flex align-items-center justify-content-between">
               <!-- Navbar Header-->
@@ -43,20 +47,11 @@
                   <div class="brand-text brand-small"><strong>UD</strong></div></a>
                 <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
               </div>
-              <!-- Navbar Menu -->
-              <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
-                <!-- Search-->
-                <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i></a></li>
-                <!-- Notifications-->
-
-                <!-- Logout    -->
-                <li class="nav-item"><a href="logout.php" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
-              </ul>
             </div>
           </div>
         </nav>
       </header>
-      <div class="page-content d-flex align-items-stretch">
+      <div class="page-content d-flex align-items-stretch"> 
         <!-- Side Navbar -->
         <nav class="side-navbar">
           <!-- Sidebar Header-->
@@ -66,23 +61,16 @@
               <h1 class="h4">User</h1>
               <p>Student</p>
             </div>
-          </div>
-          <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
-          <ul class="list-unstyled">
-<!--            <li class="active"> <a href="./"><i class="icon-home"></i>Home</a></li>-->
-            <li> <a href="abstracts.php"> <i class="icon-padnote"></i>Abstracts </a></li>
-            <li> <a href="guidelines.php"> <i class="icon-list"></i>Deadlines </a></li>
-            <li> <a href="login.php"> <i class="icon-interface-windows"></i>Login Page</a></li>
-            </ul><span class="heading">Abstracts</span>
+        </div>
         </nav>
         <div class="content-inner">
           <!-- Page Header-->
           <header class="page-header">
             <div class="container-fluid">
-              <h2 class="no-margin-bottom">Dashboard</h2>
+              <h2 class="no-margin-bottom">Deadlines</h2>
             </div>
           </header>
-          <!-- Page Footer-->
+            <!-- Page Footer-->
           <footer class="main-footer">
             <div class="container-fluid">
               <div class="row">
@@ -105,8 +93,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.cookie.js"> </script>
     <script src="js/jquery.validate.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-    <script src="js/charts-home.js"></script>
     <script src="js/front.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
     <!---->
