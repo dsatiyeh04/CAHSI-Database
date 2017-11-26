@@ -1739,7 +1739,7 @@ section.forms .line {
   height: 100%;
   display: block;
   z-index: -1;
-  background: url(../img/bg.jpg);
+  background: url(../img/cahsi_resized-2.jpg);
   background-size: cover;
   -webkit-filter: blur(10px);
   filter: blur(10px);
@@ -1773,7 +1773,7 @@ section.forms .line {
 }
 
 .login-page .form-holder .info {
-  background: rgba(51, 179, 90, 0.9);
+  background: rgba(55, 147, 146, 0.9);
   color: #fff;
 }
 

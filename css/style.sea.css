@@ -177,7 +177,7 @@ button, input {
 }
 
 .bg-blue {
-  background: #85b4f2 !important;
+ background: #85b4f2 !important;
   color: #fff;
 }
 
@@ -1739,7 +1739,7 @@ section.forms .line {
   height: 100%;
   display: block;
   z-index: -1;
-  background: url(../img/bg.jpg);
+  background: url(../img/cahsi_resized-2.jpg);
   background-size: cover;
   -webkit-filter: blur(10px);
   filter: blur(10px);
