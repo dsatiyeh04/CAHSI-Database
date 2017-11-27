@@ -1,0 +1,15 @@
+CREATE TABLE Admin (
+	Aadmin_ID INT(10) NOT NULL AUTO_INCREMENT,
+	Aname VARCHAR(40) NOT NULL,
+	Aemail VARCHAR(30) NOT NULL,
+	Apassword VARCHAR(8) NOT NULL,
+	Aphone_number CHAR(10) NOT NULL,
+	Ins_ID CHAR(4) NOT NULL,
+	Rrole_ID VARCHAR(1) NOT NULL,
+	PRIMARY KEY (Aadmin_ID),
+	FOREIGN KEY (Ins_ID) REFERENCES Institution (Ins_ID) ON UPDATE CASCADE ON DELETE CASCADE,
+	FOREIGN KEY (Rrole_ID) REFERENCES Role (Rrole_ID) ON UPDATE CASCADE ON DELETE CASCADE
+) ENGINE = InnoDB;	
+
+INSERT INTO Admin VALUES (0000000001,'Administrator','admin@utep.edu','password','9155002236','UTEP','A'), (0000000002,'Supervisor','supervisor@nmsu.edu','password','9155324433','NMSU','A');
+		
