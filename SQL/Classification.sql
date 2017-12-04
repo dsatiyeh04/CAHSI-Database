@@ -7,4 +7,4 @@ CREATE TABLE Classification (
 	
 ) ENGINE = InnoDB;
 
-INSERT INTO Classification VALUES ('C1','first-year'), ('C2','sophomore'), ('C3','junior'), ('C4','senior');
+INSERT INTO Classification VALUES ('C1','Freshman'), ('C2','Sophomore'), ('C3','Junior'), ('C4','Senior');

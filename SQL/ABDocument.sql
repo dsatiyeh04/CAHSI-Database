@@ -5,4 +5,4 @@ CREATE TABLE ABDocument (
 	PRIMARY KEY (ABKey_doc)
 ) ENGINE = InnoDB;
 
-INSERT INTO ABDocument VALUES	(0000000001,''), (0000000002,''), (0000000003,'');
+INSERT INTO ABDocument VALUES	(1,''), (2,''), (3,'');

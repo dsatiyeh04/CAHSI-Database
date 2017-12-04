@@ -1,0 +1,18 @@
+CREATE TABLE Mentor_has_Students(
+
+Uuser_ID INT(10) NOT NULL,
+Sstudent_ID INT(10) NOT NULL,
+	
+FOREIGN KEY (Uuser_ID) 
+REFERENCES User (Uuser_ID)
+ON UPDATE CASCADE
+ON DELETE CASCADE,
+	
+FOREIGN KEY (Sstudent_ID)
+REFERENCES Student (Sstudent_ID) 
+ON UPDATE CASCADE 
+ON DELETE CASCADE
+	
+) ENGINE = InnoDB;
+
+INSERT INTO Mentor_has_Students VALUES (1,1), (1,3), (3,2);

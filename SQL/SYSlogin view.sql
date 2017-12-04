@@ -1,4 +1,4 @@
-CREATE VIEW SYSlogin AS
+CREATE TABLE SYSlogin AS
 SELECT Rrole_ID as Role, Uemail as SYSemail, Upassword as SYSpassword
 FROM User
 UNION
