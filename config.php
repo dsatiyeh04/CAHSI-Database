@@ -10,15 +10,16 @@
    //We make the connection.
    $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
 
-// create a variable
-$username=$_POST['username'];
-$Uname=$_POST['Uname'];
-$Uemail=$_POST['Uemail'];
-$Upassword=$_POST['Upassword'];
-$Ugender=$_POST['Ugender'];
-$Up_tittles=$_POST['Up_tittles'];
-$school=$_POST['school'];
-$role=$_POST['role'];
+//
+////create a variable
+//$username=$_POST['username'];
+//$Uname=$_POST['Uname'];
+//$Uemail=$_POST['Uemail'];
+//$Upassword=$_POST['Upassword'];
+//$Ugender=$_POST['Ugender'];
+//$Up_tittles=$_POST['Up_tittles'];
+//$school=$_POST['school'];
+//$role=$_POST['role'];
 
  
 //Execute the query

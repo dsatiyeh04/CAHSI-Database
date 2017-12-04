@@ -1,9 +1,71 @@
+<?php
+//   //We include the configuration file
+//   include("config.php");
+//   $error = "";
+//   //Start the session
+//   session_start();
+//   
+//   if($_SERVER["REQUEST_METHOD"] == "POST") {
+//      
+//      $myusername = mysqli_real_escape_string($db,$_POST['username']);
+//      $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
+      
+      //Building the query
+//      $sql = "SELECT * FROM LOGIN WHERE username = '$myusername' and password = '$mypassword'";
+//      //Performs a query on the database
+//      $result = mysqli_query($db,$sql);
+//      //Fetch a result row as an associative, a numeric array, or both
+//      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+//      $active = $row['user_id'];
+//      
+      //Gets the number of rows in a result
+//      $count = mysqli_num_rows($result);
+//      
+      // If result matched $myusername and $mypassword, table row must be 1 row
+//      if($count >= 1) {
+//		  if($myusername=="admin"){
+//			  $_SESSION['login_user'] = $myusername;
+//			  header("location: index.php");
+//		  }
+//         else{
+//			 $_SESSION['login_user'] = $myusername;
+//			 header("location: indexR.php"); 
+//		 }
+//      }
+//		else {
+//         $error = "Your Login Name or Password is invalid";
+//      }
+//   }
+//<?php
+
+//$sql = "SELECT * FROM MyTable";
+
+//if ($_GET['sort'] == 'type')
+//{
+//    $sql .= " ORDER BY type";
+//}
+//elseif ($_GET['sort'] == 'desc')
+//{
+//    $sql .= " ORDER BY Description";
+//}
+//elseif ($_GET['sort'] == 'recorded')
+//{
+//    $sql .= " ORDER BY DateRecorded";
+//}
+//elseif($_GET['sort'] == 'added')
+//{
+//    $sql .= " ORDER BY DateAdded";
+//}
+
+//$>
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bootstrap Dashboard by Bootstrapious.com</title>
+    <title>CAHSI SYSTEM by SJ^2</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -35,21 +97,25 @@
       <div class="side-navbar-wrapper">
         <div class="sidenav-header d-flex align-items-center justify-content-center">
           <div class="sidenav-header-inner text-center"><img src="img/avatar-1.jpg" alt="person" class="img-fluid rounded-circle">
-            <h2 class="h5 text-uppercase">Anderson Hardy</h2><span class="text-uppercase">Web Developer</span>
+            <h2 class="h5 text-uppercase">Claudia Casas</h2><span class="text-uppercase">Administrator</span>
           </div>
-          <div class="sidenav-header-logo"><a href="index.php" class="brand-small text-center"> <strong>B</strong><strong class="text-primary">D</strong></a></div>
+          <div class="sidenav-header-logo"><a href="index.php" class="brand-small text-center"> <strong>A</strong><strong class="text-primary">D</strong></a></div>
         </div>
         <div class="main-menu">
           <ul id="side-main-menu" class="side-menu list-unstyled">                  
             <li><a href="index.php"> <i class="icon-home"></i><span>Home</span></a></li>
-            <li> <a href="forms.php"><i class="icon-form"></i><span>Forms</span></a></li>
-            <li class="active"> <a href="charts.php"><i class="icon-presentation"></i><span>Charts</span></a></li>
-            <li> <a href="tables.php"> <i class="icon-grid"> </i><span>Tables  </span></a></li>
-            <li> <a href="login.php"> <i class="icon-interface-windows"></i><span>Login page                        </span></a></li>
+            <li> <a href="forms.php"><i class="icon-form"></i><span>Modify</span></a></li>
+<!--            <li> <a href="charts.php"><i class="icon-presentation"></i><span>Charts</span></a></li>-->
+            <li> <a href="tables.php"> <i class="icon-grid"> </i><span>Tables  </span>
+              <div class="badge badge-info">Overview</div></a></li>
+<!--            <li> <a href="login.php"> <i class="icon-interface-windows"></i><span>Login page</span></a></li>-->
+<!--
             <li> <a href="#"> <i class="icon-mail"></i><span>Demo</span>
                 <div class="badge badge-warning">6 New</div></a></li>
+-->
           </ul>
         </div>
+<!--
         <div class="admin-menu">
           <ul id="side-admin-menu" class="side-menu list-unstyled"> 
             <li> <a href="#pages-nav-list" data-toggle="collapse" aria-expanded="false"><i class="icon-interface-windows"></i><span>Dropdown</span>
@@ -68,6 +134,7 @@
             <li> <a href=""> <i class="icon-picture"> </i><span>Demo</span></a></li>
           </ul>
         </div>
+-->
       </div>
     </nav>
     <div class="page home-page">
@@ -77,8 +144,9 @@
           <div class="container-fluid">
             <div class="navbar-holder d-flex align-items-center justify-content-between">
               <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"> </i></a><a href="index.php" class="navbar-brand">
-                  <div class="brand-text d-none d-md-inline-block"><span>Bootstrap </span><strong class="text-primary">Dashboard</strong></div></a></div>
+                  <div class="brand-text d-none d-md-inline-block"><span>Administrator </span><strong class="text-primary">Dashboard</strong></div></a></div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+<!--
                 <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell"></i><span class="badge badge-warning">12</span></a>
                   <ul aria-labelledby="notifications" class="dropdown-menu">
                     <li><a rel="nofollow" href="#" class="dropdown-item"> 
@@ -104,6 +172,8 @@
                     <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong> <i class="fa fa-bell"></i>view all notifications                                            </strong></a></li>
                   </ul>
                 </li>
+-->
+<!--
                 <li class="nav-item dropdown"> <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-envelope"></i><span class="badge badge-info">10</span></a>
                   <ul aria-labelledby="notifications" class="dropdown-menu">
                     <li><a rel="nofollow" href="#" class="dropdown-item d-flex"> 
@@ -124,6 +194,7 @@
                     <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong> <i class="fa fa-envelope"></i>Read all messages    </strong></a></li>
                   </ul>
                 </li>
+-->
                 <li class="nav-item"><a href="login.php" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
               </ul>
             </div>
@@ -134,63 +205,227 @@
         <div class="container-fluid">
           <ul class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-            <li class="breadcrumb-item active">Charts</li>
+            <li class="breadcrumb-item active">Tables</li>
           </ul>
         </div>
       </div>
       <section class="charts">
         <div class="container-fluid">
           <header> 
-            <h1 class="h3">Charts</h1>
+            <h1 class="h3">Tables</h1>
           </header>
           <div class="row">
-            <div class="col-lg-6">
-              <div class="card line-chart-example">
-                <div class="card-header d-flex align-items-center">
-                  <h2 class="h5 display">Line Chart Example</h2>
-                </div>
-                <div class="card-body">
-                  <canvas id="lineChartExample"></canvas>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="card bar-chart-example">
-                <div class="card-header d-flex align-items-center">
-                  <h2 class="h5 display">Bar Chart Example</h2>
-                </div>
-                <div class="card-body">
-                  <canvas id="barChartExample"></canvas>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="card pie-chart-example">
-                <div class="card-header d-flex align-items-center">
-                  <h2 class="h5 display">Pie Chart Example</h2>
-                </div>
-                <div class="card-body">
-                  <canvas id="pieChartExample"></canvas>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="card polar-chart-example">
-                <div class="card-header d-flex align-items-center">
-                  <h2 class="h5 display">Ploar Chart Example</h2>
-                </div>
-                <div class="card-body">
-                  <canvas id="polarChartExample"></canvas>
-                </div>
-              </div>
-            </div>
             <div class="col-lg-12">
-              <div class="card radar-chart-example">
+              <div class="card">
                 <div class="card-header d-flex align-items-center">
-                  <h2 class="h5 display">Radar Chart Example</h2>
+                  <h2 class="h5 display">Students</h2>
+                </div>
+                               <div class="card-body">
+                  <table class="table table-sm">
+                    <thead>
+                      <tr>
+                        <th>Student</th>
+                        <th>Abstract or Poster</th>
+                        <th>Download Current Student Project</th>
+                        <th>Date Student Uploaded </th> 
+                        <th>Mentor</th>
+                        <th>Current Mentor Grade</th>
+                        <th>Reviewer</th>
+                        <th>Current Review Grade</th>
+                        <th>Completed Project</th>
+                          
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Dalia Atiyeh</th>
+                        <td>Abstract</td>
+                        <td>word.word</td>
+                        <td>11/17/2019</td>
+                          <td>Paola Ruby</td>
+                          <td>Approved-Ready</td>
+                          <td>Paul George</td>
+                          <td>Approved-Ready</td>
+                          <td>Completed</td>
+                        
+                      </tr>
+                         <tr>
+                        <th scope="row">Stef Carrillo</th>
+                        <td>Abstract</td>
+                        <td>word.word</td>
+                        <td>11/17/2019</td>
+                          <td>Paola Ruby</td>
+                          <td>Approved-Ready</td>
+                          <td>Paul George</td>
+                          <td>Approved-Ready</td>
+                          <td>Completed</td>
+                        
+                      </tr>
+                         <tr>
+                        <th scope="row">Jorge Meza</th>
+                        <td>Abstract</td>
+                        <td>word.word</td>
+                        <td>11/17/2019</td>
+                          <td>Paola Ruby</td>
+                          <td>Approved-Ready</td>
+                          <td>Paul George</td>
+                          <td>Approved-Ready</td>
+                          <td>Completed</td>
+                        
+                      </tr> 
+                        <tr>
+                        <th scope="row">Juan Gonzalez</th>
+                        <td>Abstract</td>
+                        <td>word.word</td>
+                        <td>11/17/2019</td>
+                          <td>Paola Ruby</td>
+                          <td>Approved-Ready</td>
+                          <td>Paul George</td>
+                          <td>Approved-Ready</td>
+                          <td>Completed</td>
+                        
+                      </tr>
+
+                          
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+<!--
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header d-flex align-items-center">
+                  <h2 class="h5 display">Striped Table</h2>
                 </div>
                 <div class="card-body">
-                  <canvas id="radarChartExample"></canvas>
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter                            </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+-->
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header d-flex align-items-center">
+                  <h2 class="h5 display">Striped table with hover effect</h2>
+                </div>
+                <div class="card-body">
+                  <table class="table table-striped table-hover">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter                            </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header d-flex align-items-center">
+                  <h2 class="h5 display">Compact Table</h2>
+                </div>
+                <div class="card-body">
+                  <table class="table table-striped table-sm">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter      </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">5</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">6</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter                                                                              </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -219,8 +454,6 @@
     <script src="js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
     <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
     <script src="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-    <script src="js/charts-custom.js"></script>
     <script src="js/front.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
     <!---->

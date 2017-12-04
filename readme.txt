@@ -1,6 +1,6 @@
 ################################################################################################
 
-Documentation for Bootstrap Admin by Bootstrapious - https://bootstrapious.com, rel. 2017/06/11
+Documentation for Bootstrap Dashboard by Bootstrapious - https://bootstrapious.com
 
 ################################################################################################
 
@@ -28,11 +28,23 @@ Charts on the homepage are initialised in js/charts-home.js, charts from the Cha
 Credits
 ---------
 
-- Botstrap 4.0.0-alpha.6 - http://getbootstrap.com
+- Botstrap 4.0.0-beta2 - http://getbootstrap.com
 - Font Awesome 4.7 - http://fontawesome.io/
-- Google Fonts - Poppins
+- Google Fonts - Roboto
 - more in credits.txt.
 
+Changelog
+---------
+
+Version 1.1 - 2017/10/27
+
+- moved 3rd party scripts to /vendor directory
+- updated to Boostrap 4.0.0-beta2
+- fixed small bugs
+
+Version 1.0 -  2017/04/11
+
+- Initial Release
 
 ---------------------
  LICENSE CONDITIONS

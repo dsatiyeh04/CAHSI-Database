@@ -1,48 +1,9 @@
-<?php
-   //We include the configuration file
-   include("config.php");
-   $error = "";
-   //Start the session
-   session_start();
-   
-   if($_SERVER["REQUEST_METHOD"] == "POST") {
-      
-      $myusername = mysqli_real_escape_string($db,$_POST['username']);
-      $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
-      
-      //Building the query
-      $sql = "SELECT * FROM LOGIN WHERE username = '$myusername' and password = '$mypassword'";
-      //Performs a query on the database
-      $result = mysqli_query($db,$sql);
-      //Fetch a result row as an associative, a numeric array, or both
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $active = $row['user_id'];
-      
-      //Gets the number of rows in a result
-      $count = mysqli_num_rows($result);
-      
-      // If result matched $myusername and $mypassword, table row must be 1 row
-      if($count >= 1) {
-		  if($myusername=="admin"){
-			  $_SESSION['login_user'] = $myusername;
-			  header("location: index.php");
-		  }
-         else{
-			 $_SESSION['login_user'] = $myusername;
-			 header("location: indexR.php"); 
-		 }
-      }
-		else {
-         $error = "Your Login Name or Password is invalid";
-      }
-   }
-?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CAHSI Submission</title>
+    <title>CAHSI Abstract Submission</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -73,21 +34,10 @@
       <div class="container">
         <div class="form-outer text-center d-flex align-items-center">
           <div class="form-inner">
-            <div class="logo text-uppercase"><span>Abstract</span><strong class="text-primary">Selection</strong></div>
-            <p>Welcome Students, Mentors, and Reviewers! Please login to view any pending tasks!</p>
-            <form id="login-form" method="post" action="login.php">
-              <div class="form-group">
-                <input id="login-username" type="text" name="username" required="" class="input-material">
-                <label for="login-username" class="label-custom">E-mail</label>
-              </div>
-              <div class="form-group">
-                <input id="login-password" type="password" name="password" required="" class="input-material">
-                <label for="login-password" class="label-custom">Password</label>
-              </div>
-            <input type="submit" class="btn btn-primary" value="Login">
-            </form>
-              <a href="forgotpass.php" class="forgot-pass">Forgot Password?</a><small>First time Student? </small><a href="registers.php" class="signup">Sign up</a><br /> 
-              <small>First time Mentor/Reviewer? </small><a href="registermr.php" class="signup">Signup</a>
+            <div class="logo text-uppercase"><span>New</span><strong class="text-primary">Member</strong></div>
+            <p>Registration info has been saved!<br />
+              Thank you!</p>
+           <a href="login.php" class="signup">Login</a>
           </div>
           <div class="copyrights text-center">
             <p>Design by <a href="https://bootstrapious.com" class="external">Bootstrapious</a></p>

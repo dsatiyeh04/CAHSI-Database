@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bootstrap Dashboard by Bootstrapious.com</title>
+    <title>CAHSI SYSTEM by SJ^2</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -31,25 +31,30 @@
   </head>
   <body>
     <!-- Side Navbar -->
+   <!-- Side Navbar -->
     <nav class="side-navbar">
       <div class="side-navbar-wrapper">
         <div class="sidenav-header d-flex align-items-center justify-content-center">
           <div class="sidenav-header-inner text-center"><img src="img/avatar-1.jpg" alt="person" class="img-fluid rounded-circle">
-            <h2 class="h5 text-uppercase">Anderson Hardy</h2><span class="text-uppercase">Web Developer</span>
+            <h2 class="h5 text-uppercase">Student name</h2><span class="text-uppercase">Student</span>
           </div>
-          <div class="sidenav-header-logo"><a href="index.php" class="brand-small text-center"> <strong>B</strong><strong class="text-primary">D</strong></a></div>
+          <div class="sidenav-header-logo"><a href="indexS.php" class="brand-small text-center"> <strong>S</strong><strong class="text-primary">D</strong></a></div>
         </div>
         <div class="main-menu">
           <ul id="side-main-menu" class="side-menu list-unstyled">                  
-            <li><a href="index.php"> <i class="icon-home"></i><span>Home</span></a></li>
-            <li> <a href="forms.php"><i class="icon-form"></i><span>Forms</span></a></li>
-            <li class="active"> <a href="charts.php"><i class="icon-presentation"></i><span>Charts</span></a></li>
-            <li> <a href="tables.php"> <i class="icon-grid"> </i><span>Tables  </span></a></li>
-            <li> <a href="login.php"> <i class="icon-interface-windows"></i><span>Login page                        </span></a></li>
+            <li><a href="indexS.php"> <i class="icon-home"></i><span>Home</span></a></li>
+            <li> <a href="submission.php"><i class="icon-form"></i><span>Submission</span></a></li>
+<!--            <li> <a href="charts.php"><i class="icon-presentation"></i><span>Charts</span></a></li>-->
+            <li> <a href="status.php"> <i class="icon-grid"></i><span>Status</span>
+              <div class="badge badge-info">Check!</div></a></li>
+<!--            <li> <a href="login.php"> <i class="icon-interface-windows"></i><span>Login page</span></a></li>-->
+<!--
             <li> <a href="#"> <i class="icon-mail"></i><span>Demo</span>
                 <div class="badge badge-warning">6 New</div></a></li>
+-->
           </ul>
         </div>
+<!--
         <div class="admin-menu">
           <ul id="side-admin-menu" class="side-menu list-unstyled"> 
             <li> <a href="#pages-nav-list" data-toggle="collapse" aria-expanded="false"><i class="icon-interface-windows"></i><span>Dropdown</span>
@@ -68,6 +73,7 @@
             <li> <a href=""> <i class="icon-picture"> </i><span>Demo</span></a></li>
           </ul>
         </div>
+-->
       </div>
     </nav>
     <div class="page home-page">
@@ -76,9 +82,10 @@
         <nav class="navbar">
           <div class="container-fluid">
             <div class="navbar-holder d-flex align-items-center justify-content-between">
-              <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"> </i></a><a href="index.php" class="navbar-brand">
-                  <div class="brand-text d-none d-md-inline-block"><span>Bootstrap </span><strong class="text-primary">Dashboard</strong></div></a></div>
+              <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"> </i></a><a href="indexS.php" class="navbar-brand">
+                  <div class="brand-text d-none d-md-inline-block"><span>Student </span><strong class="text-primary">Dashboard</strong></div></a></div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+<!--
                 <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell"></i><span class="badge badge-warning">12</span></a>
                   <ul aria-labelledby="notifications" class="dropdown-menu">
                     <li><a rel="nofollow" href="#" class="dropdown-item"> 
@@ -104,6 +111,8 @@
                     <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong> <i class="fa fa-bell"></i>view all notifications                                            </strong></a></li>
                   </ul>
                 </li>
+-->
+<!--
                 <li class="nav-item dropdown"> <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-envelope"></i><span class="badge badge-info">10</span></a>
                   <ul aria-labelledby="notifications" class="dropdown-menu">
                     <li><a rel="nofollow" href="#" class="dropdown-item d-flex"> 
@@ -124,76 +133,72 @@
                     <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong> <i class="fa fa-envelope"></i>Read all messages    </strong></a></li>
                   </ul>
                 </li>
+-->
                 <li class="nav-item"><a href="login.php" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
               </ul>
             </div>
           </div>
         </nav>
       </header>
-      <div class="breadcrumb-holder">   
+      <div class="breadcrumb-holder">
         <div class="container-fluid">
           <ul class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-            <li class="breadcrumb-item active">Charts</li>
+            <li class="breadcrumb-item active">Submission</li>
           </ul>
         </div>
       </div>
-      <section class="charts">
+      <section class="forms">
         <div class="container-fluid">
           <header> 
-            <h1 class="h3">Charts</h1>
+            <h1 class="h3 display">Submission of Abstract and Poster</h1>
           </header>
           <div class="row">
             <div class="col-lg-6">
-              <div class="card line-chart-example">
+              <div class="card">
                 <div class="card-header d-flex align-items-center">
-                  <h2 class="h5 display">Line Chart Example</h2>
+                  <h2 class="h5 display display">Uploading of Abstract </h2>
                 </div>
                 <div class="card-body">
-                  <canvas id="lineChartExample"></canvas>
+                  <p>Submit Abstract</p>
+                  <form action = "?" method ="POST" enctype ="multipart/form-data">
+                       <div class="form-group">
+                <label for="upload-abstract" class="label-custom">Abstract Name</label>
+                <input id="upload-abstract" type="abstract" name="uploadAbstract" required>
+                 </div>
+                      <label>Uploading File</label>
+                      <p><input type = "file" name ="file"/></p>
+
+                    <div class="form-group">       
+                      <input type="upload" value="Upload" class="btn btn-primary">
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
             <div class="col-lg-6">
-              <div class="card bar-chart-example">
+              <div class="card">
                 <div class="card-header d-flex align-items-center">
-                  <h2 class="h5 display">Bar Chart Example</h2>
+                  <h2 class="h5 display">Uploading of Poster</h2>
                 </div>
                 <div class="card-body">
-                  <canvas id="barChartExample"></canvas>
+                  <p>Submit Poster</p>
+                <form action = "?" method ="POST" enctype ="multipart/form-data">
+                     <div class="form-group">
+                <label for="upload-poster" class="label-custom">Poster Name</label>
+                <input id="upload-poster" type="poster" name="uploadPoster" required>
+                 </div>
+                      <label>Uploading File</label>
+                      <p><input type = "file" name ="file"/></p>
+
+                    <div class="form-group row">       
+                        <input type="Upload" value="Upload" class="btn btn-primary">
+                      </div>
+                  </form>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="card pie-chart-example">
-                <div class="card-header d-flex align-items-center">
-                  <h2 class="h5 display">Pie Chart Example</h2>
-                </div>
-                <div class="card-body">
-                  <canvas id="pieChartExample"></canvas>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="card polar-chart-example">
-                <div class="card-header d-flex align-items-center">
-                  <h2 class="h5 display">Ploar Chart Example</h2>
-                </div>
-                <div class="card-body">
-                  <canvas id="polarChartExample"></canvas>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-12">
-              <div class="card radar-chart-example">
-                <div class="card-header d-flex align-items-center">
-                  <h2 class="h5 display">Radar Chart Example</h2>
-                </div>
-                <div class="card-body">
-                  <canvas id="radarChartExample"></canvas>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </section>
@@ -219,8 +224,6 @@
     <script src="js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
     <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
     <script src="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-    <script src="js/charts-custom.js"></script>
     <script src="js/front.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
     <!---->
